@@ -1,8 +1,6 @@
 const express = require("express");
 
-
 const app = express();
-
 
 const database = {
     users: [
@@ -25,12 +23,14 @@ const database = {
     ]
 }
 
-
-
 app.get("/", (req, res) => {
     res.json(database.users);
-})
+});
+
+app.post("/signin", (req, res) => {
+    console.log(req.body);
+});
 
 app.listen("3000", () => {
     console.log("app is running on port 3000");
-})
+});
