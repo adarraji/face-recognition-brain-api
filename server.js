@@ -26,6 +26,7 @@ const database = {
 }
 
 
+
 app.get("/", (req, res) => {
     res.json(database.users);
 })
