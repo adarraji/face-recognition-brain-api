@@ -38,6 +38,19 @@ app.post("/signin", (req, res) => {
     }
 });
 
+app.post("/register", (req, res) => {
+    const { name, email, password } = req.body;
+    database.users.push({
+        id: "125",
+        name: name,
+        email: email,
+        password: password,
+        entries: 0,
+        joined: new Date()
+    });
+    res.json(database.users[database.users.length - 1]);
+});
+
 app.listen("3000", () => {
     console.log("app is running on port 3000");
 });
