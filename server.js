@@ -4,16 +4,22 @@ const cors = require("cors");
 require('dotenv').config();
 const knex = require('knex')
 
-knex({
+console.log(typeof (process.env.DB_USER));
+console.log(typeof (process.env.DB_PASSWORD));
+
+const postgres = knex({
     client: 'pg',
     connection: {
         host: '127.0.0.1',
         port: 5432,
-        user: `${process.env.DB_USER}`,
-        password: `${process.env.DB_PASSWORD}`,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
         database: 'smart-brain'
     }
 });
+
+
+postgres.select("*").from("users").then(data => console.log(data));
 
 const app = express();
 app.use(bodyParser.json());
