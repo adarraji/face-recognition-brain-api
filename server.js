@@ -2,11 +2,22 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 require('dotenv').config();
+const knex = require('knex')
+
+knex({
+    client: 'pg',
+    connection: {
+        host: '127.0.0.1',
+        port: 5432,
+        user: `${process.env.DB_USER}`,
+        password: `${process.env.DB_PASSWORD}`,
+        database: 'myapp_test'
+    }
+});
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-
 
 const database = {
     users: [
