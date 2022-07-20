@@ -1,9 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-require('dotenv').config();
 const knex = require('knex');
 const { response } = require("express");
+const bcrypt = require("bcrypt-nodejs");
+
+require('dotenv').config();
+
 
 const db = knex({
     client: 'pg',
