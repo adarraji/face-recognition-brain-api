@@ -15,10 +15,6 @@ const db = knex({
     }
 });
 
-db.select("*").from("users").then(data => {
-    console.log(data);
-});
-
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -58,13 +54,11 @@ app.post("/signin", (req, res) => {
 
 app.post("/register", (req, res) => {
     const { name, email, password } = req.body;
-    database.users.push({
-        id: "125",
+    db("users").insert({
         name: name,
         email: email,
-        entries: 0,
         joined: new Date()
-    });
+    }).then(console.log);
     res.json(database.users[database.users.length - 1]);
 });
 
