@@ -31,11 +31,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/signin", (req, res) => signin.handleSignIn(req, res, db, bcrypt));
-
 app.post("/register", (req, res) => register.handleRegister(req, res, db, bcrypt));
-
 app.get("/profile/:id", (req, res) => profile.handleProfile(req, res, db));
-
 app.put("/image", (req, res) => image.handleImage(req, res, db));
 
 
