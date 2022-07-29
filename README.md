@@ -19,8 +19,9 @@ You can get Clarifai API key [here](https://www.clarifai.com/)
 ## Built With
 
 * NodeJS 
-* Knex
 * Postgres
+* Knex 
+* Clarifai API
 
 ## Authors
 
