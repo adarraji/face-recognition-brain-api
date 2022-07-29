@@ -10,6 +10,7 @@ const image = require("./controllers/image");
 
 require('dotenv').config();
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db = knex({
     client: 'pg',
