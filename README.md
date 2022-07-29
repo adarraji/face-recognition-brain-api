@@ -23,6 +23,9 @@ You can get Clarifai API key [here](https://www.clarifai.com/)
 * Knex 
 * Clarifai API
 
+## Deployment
+Deployed on Heroku
+
 ## Authors
 
 - **Ali Darraji** - [https://github.com/adarraji](https://github.com/adarraji)
