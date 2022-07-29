@@ -14,11 +14,8 @@ require('dotenv').config();
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'postgresql-perpendicular-14700',
-        port: 5432,
-        user: process.env.DB_USER,
-        password: '',
-        database: 'smart-brain'
+        host: process.env.DATABASE_URL,
+        ssl: true
     }
 });
 
