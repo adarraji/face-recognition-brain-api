@@ -44,7 +44,11 @@ Add Clarifai API Key `REACT_APP_API_KEY` in the `controllers/image.js`
 
 
 ## Deployment
-Deployed on Heroku
+
+Backend deployed on [Render](https://render.com/)
+
+PostgreSQL deployed on [Supbase](https://supabase.com/database)
+
 
 ## Authors
 
