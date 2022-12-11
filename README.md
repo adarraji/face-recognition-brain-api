@@ -22,7 +22,7 @@ You can get Clarifai API key [here](https://www.clarifai.com/)
 * Postgres
 * Knex 
 * Clarifai API
-
+<br/>
 
 ## Environmental Variables
 
@@ -34,6 +34,14 @@ if you are using local postgres database you can use the following:
 
 `PG_DATABASE_URL=postgres://{user}:{password}@{hostname}:{port}/{database-name}`
 <br/>
+
+### Clarifai API Key
+
+Add Clarifai API Key `REACT_APP_API_KEY` in the `controllers/image.js`
+<br/>
+<br/>
+
+
 
 ## Deployment
 Deployed on Heroku
