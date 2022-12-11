@@ -23,6 +23,18 @@ You can get Clarifai API key [here](https://www.clarifai.com/)
 * Knex 
 * Clarifai API
 
+
+## Environmental Variables
+
+### Database URL
+
+Add your PstgreSQL url `PG_DATABASE_URL` in the `index.js`
+
+if you are using local postgres database you can use the following:
+
+`PG_DATABASE_URL=postgres://{user}:{password}@{hostname}:{port}/{database-name}`
+<br/>
+
 ## Deployment
 Deployed on Heroku
 
